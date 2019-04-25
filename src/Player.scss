@@ -1,0 +1,12 @@
+.Player {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &-leftPane {
+    flex: 1;
+  }
+  &-rightPane {
+    flex: 3;
+  }
+}
