@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import characterData from "./data.json";
@@ -30,6 +30,10 @@ function getAbilityModifier(abilityScore) {
 }
 
 function Player({ data, id }) {
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
   const character = data.characters.byId[id];
   const [currentHp, maxHp, tempHp] = character.hitpoints;
   const [currentHitDice, maxHitDice] = character.hitDice.amount;
@@ -203,7 +207,7 @@ function Player({ data, id }) {
                 <h2>Attacks</h2>
                 <ul>
                   {character.attacks.map(({ name, attack, damage }) => (
-                    <li>
+                    <li key={name}>
                       <strong>{name}</strong>
                       <br />+{attack} to hit, deals {damage} damage.
                     </li>
@@ -276,22 +280,49 @@ function Player({ data, id }) {
   );
 }
 
-function DungeonMaster({ data }) {
+function DungeonMaster({ data, onUpdate }) {
+  const [localData, setLocalData] = useState(
+    JSON.stringify(characterData, null, 2)
+  );
+
+  function handleUpdate() {
+    return onUpdate(localData);
+  }
+
   return (
-    <div>
-      <select>
-        {data.characters.all.map(id => (
-          <option key={id} value={id}>
-            {data.characters.byId[id].name}
-          </option>
-        ))}
-      </select>
+    <div className="DungeonMaster">
+      <div className="DungeonMaster-leftPane">
+        <textarea
+          value={localData}
+          onChange={e => setLocalData(e.target.value)}
+        />
+        <button onClick={handleUpdate}>Update</button>
+      </div>
+      {data && (
+        <div className="DungeonMaster-rightPane">
+          <select>
+            {data.characters.all.map(id => (
+              <option key={id} value={id}>
+                {data.characters.byId[id].name}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
     </div>
   );
 }
 
+const socket = new WebSocket("ws://localhost:9000");
+
 function App() {
-  const [data, setData] = useState(characterData);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    socket.onmessage = ({ data }) => setData(JSON.parse(data));
+
+    return socket.close;
+  }, []);
 
   return (
     <Router>
@@ -304,7 +335,12 @@ function App() {
             }
           }) => <Player data={data} id={id} />}
         />
-        <Route path="/dm" render={() => <DungeonMaster data={data} />} />
+        <Route
+          path="/dm"
+          render={() => (
+            <DungeonMaster data={data} onUpdate={data => socket.send(data)} />
+          )}
+        />
         <Route render={() => <p>None</p>} />
       </Switch>
     </Router>
