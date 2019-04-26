@@ -1,0 +1,10 @@
+.Party {
+  margin-top: 1rem;
+  list-style-type: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,31 @@
+@import "src/mixins.scss";
+
+.DungeonMaster {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &-leftPane {
+    @include background;
+    @include border;
+    @include font-color;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    textarea {
+      flex: 4;
+    }
+    button {
+      flex: 1;
+    }
+  }
+  &-rightPane {
+    @include background;
+    @include border;
+    @include font-color;
+
+    flex: 3;
+  }
+}

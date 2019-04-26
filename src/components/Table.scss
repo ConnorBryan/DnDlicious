@@ -1,0 +1,25 @@
+.Table {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &-row {
+    display: flex;
+    flex: 1;
+    padding-bottom: 0.5rem;
+
+    &:not(:first-of-type) {
+      padding-top: 0.5rem;
+    }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #fff;
+    }
+    &-cell {
+      flex: 1;
+
+      &:not(:first-of-type) {
+        text-align: center;
+      }
+    }
+  }
+}

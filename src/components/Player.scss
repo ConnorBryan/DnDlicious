@@ -1,0 +1,64 @@
+@import "src/mixins.scss";
+
+.Player {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &-leftPane {
+    @include background;
+    @include border;
+    @include font-color;
+
+    flex: 1;
+    padding: 1rem;
+
+    &-top {
+      @include background;
+      @include border;
+
+      margin-bottom: 1rem;
+      padding: 1rem;
+      text-align: center;
+
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &-rightPane {
+    @include background;
+    @include border;
+    @include font-color;
+
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    overflow: auto;
+
+    &-nav {
+      @include background;
+      @include border;
+      @include font-color;
+
+      padding: 0.5rem 0;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+    }
+    &-content {
+      overflow: auto;
+
+      &-block {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        > div {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

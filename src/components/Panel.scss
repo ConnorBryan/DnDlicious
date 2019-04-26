@@ -1,0 +1,26 @@
+@import "src/mixins.scss";
+
+.Panel {
+  @include background;
+  @include border;
+  @include font-color;
+
+  margin: 1rem;
+
+  h3 {
+    @include background;
+    @include border;
+    @include font-color;
+
+    padding: 0.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-transform: uppercase;
+  }
+  &-content {
+    padding: 0.5rem;
+  }
+}
