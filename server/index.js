@@ -9,8 +9,6 @@ wsServer.on("connection", socket => {
   connectedSockets.push(socket);
 
   socket.on("message", message => {
-    latestData = message;
-
     connectedSockets.forEach(socket => socket.send(message));
   });
 
