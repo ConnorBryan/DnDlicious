@@ -338,7 +338,7 @@ const socketUrl =
 const socket = new WebSocket(socketUrl);
 
 function App() {
-  const [data, setData] = useState(characterData);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     socket.onmessage = ({ data }) => setData(JSON.parse(data));
