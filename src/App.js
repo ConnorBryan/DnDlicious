@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import characterData from "./data.json";
+import "./DungeonMaster.scss";
 import "./Player.scss";
+import basicItems from "./data/basic-items.json";
+import Nav from "./Nav";
 
 function getAbilityModifier(abilityScore) {
   return {
@@ -54,26 +57,34 @@ function Player({ data, id }) {
         <h3>Condition: {character.condition}</h3>
       </div>
       <div className="Player-rightPane">
-        <ul>
-          <li>
-            <Link to={`/player/${id}`}>Attributes</Link>
-          </li>
-          <li>
-            <Link to={`/player/${id}/background`}>Background</Link>
-          </li>
-          <li>
-            <Link to={`/player/${id}/battle`}>Battle</Link>
-          </li>
-          <li>
-            <Link to={`/player/${id}/equipment`}>Equipment</Link>
-          </li>
-          <li>
-            <Link to={`/player/${id}/proficiencies`}>Proficiencies</Link>
-          </li>
-          <li>
-            <Link to={`/player/${id}/features`}>Features</Link>
-          </li>
-        </ul>
+        <Nav
+          entries={[
+            {
+              text: "Attributes",
+              path: `/player/${id}`
+            },
+            {
+              text: "Background",
+              path: `/player/${id}/background`
+            },
+            {
+              text: "Battle",
+              path: `/player/${id}/battle`
+            },
+            {
+              text: "Equipment",
+              path: `/player/${id}/equipment`
+            },
+            {
+              text: "Proficiencies",
+              path: `/player/${id}/proficiencies`
+            },
+            {
+              text: "Features",
+              path: `/player/${id}/features`
+            }
+          ]}
+        />
         <Switch>
           <Route
             exact
@@ -298,8 +309,8 @@ function DungeonMaster({ data, onUpdate }) {
         />
         <button onClick={handleUpdate}>Update</button>
       </div>
-      {data && (
-        <div className="DungeonMaster-rightPane">
+      <div className="DungeonMaster-rightPane">
+        {data && (
           <select>
             {data.characters.all.map(id => (
               <option key={id} value={id}>
@@ -307,8 +318,15 @@ function DungeonMaster({ data, onUpdate }) {
               </option>
             ))}
           </select>
-        </div>
-      )}
+        )}
+        <select>
+          {basicItems.basicitem.map(({ name }) => (
+            <option key={name} value={name}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
@@ -320,7 +338,7 @@ const socketUrl =
 const socket = new WebSocket(socketUrl);
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(characterData);
 
   useEffect(() => {
     socket.onmessage = ({ data }) => setData(JSON.parse(data));

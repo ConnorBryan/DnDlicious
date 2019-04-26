@@ -1,0 +1,21 @@
+@mixin background {
+  background: rgb(113, 110, 215);
+  background: linear-gradient(
+    180deg,
+    rgba(113, 110, 215, 1) 0%,
+    rgba(47, 49, 219, 1) 35%
+  );
+  background-repeat: none;
+}
+
+@mixin border {
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+@mixin font-color {
+  color: #fff;
+  font-weight: bolder;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000;
+}
