@@ -315,8 +315,8 @@ function DungeonMaster({ data, onUpdate }) {
 
 const socketUrl =
   process.env.NODE_ENV === "production"
-    ? "wss://142.93.30.81:9000"
-    : "wss://142.93.30.81:9000";
+    ? "ws://142.93.30.81:9000"
+    : "ws://localhost:9000";
 const socket = new WebSocket(socketUrl);
 
 function App() {
