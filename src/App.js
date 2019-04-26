@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import characterData from "./data.json";
 import "./DungeonMaster.scss";
@@ -363,7 +363,7 @@ function App() {
             <DungeonMaster data={data} onUpdate={data => socket.send(data)} />
           )}
         />
-        <Route render={() => <p>None</p>} />
+        <Route render={() => <Link to="/player/1">Load Player</Link>} />
       </Switch>
     </Router>
   );
