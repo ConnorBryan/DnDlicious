@@ -228,6 +228,7 @@ export default function Player({ data, id }) {
                               ["Nature", character.skills.nature],
                               ["Perception", character.skills.perception],
                               ["Performance", character.skills.performance],
+                              ["Persuasion", character.skills.persuasion],
                               ["Religion", character.skills.religion],
                               [
                                 "Sleight of Hand",

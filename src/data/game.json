@@ -2,87 +2,505 @@
   "characters": {
     "byId": {
       "1": {
-        "name": "Thia Ilfakir",
-        "playerName": "Elena",
-        "class": "Ranger",
-        "level": 3,
-        "race": "Half-Elf",
-        "hitpoints": [10, 10, 0],
-        "experiencePoints": 0,
-        "gold": 100,
+        "name": "Bheshker Furvuroth",
+        "playerName": "Garret",
+        "class": "Paladin",
+        "level": 4,
+        "race": "Dragonborn",
+        "hitpoints": [32, 32, 0],
+        "experiencePoints": 4297,
+        "gold": 217,
         "condition": "Normal",
         "inspiration": false,
         "passivePerception": 10,
         "battle": {
-          "armorClass": 12,
-          "initiative": 3,
-          "speed": 35
+          "armorClass": 17,
+          "initiative": 1,
+          "speed": 30
         },
         "spells": [
           {
             "level": "Cantrip",
-            "known": [
-              {
-                "name": "Fire Bolt",
-                "description": "Derp",
-                "prepared": true
-              }
-            ]
+            "known": []
           },
           {
             "level": 1,
-            "slots": [1, 1],
+            "slots": [3, 3],
             "known": [
               {
-                "name": "Heavy Magic Missile",
-                "description": "Derp two",
+                "name": "Armor of Agathys",
+                "prepared": true
+              },
+              {
+                "name": "Command",
+                "prepared": true
+              },
+              {
+                "name": "Compelled Duel",
+                "prepared": true
+              },
+              {
+                "name": "Bless",
+                "prepared": true
+              },
+              {
+                "name": "Shield of Faith",
+                "prepared": true
+              },
+              {
+                "name": "Divine Favor",
                 "prepared": true
               }
             ]
           }
         ],
         "abilities": {
-          "proficiency": 3,
-          "strength": 10,
-          "dexterity": 10,
-          "constitution": 10,
-          "intelligence": 10,
+          "proficiency": 2,
+          "strength": 16,
+          "dexterity": 12,
+          "constitution": 13,
+          "intelligence": 8,
           "wisdom": 10,
-          "charisma": 10
+          "charisma": 18
         },
         "saves": {
-          "strength": 0,
-          "dexterity": 0,
-          "constitution": 0,
-          "intelligence": 0,
-          "wisdom": 0,
-          "charisma": 0
+          "strength": 3,
+          "dexterity": 1,
+          "constitution": 1,
+          "intelligence": -1,
+          "wisdom": 2,
+          "charisma": 5
         },
         "skills": {
-          "acrobatics": 0,
+          "acrobatics": 1,
           "animalHandling": 0,
-          "arcana": 0,
-          "athletics": 0,
-          "deception": 0,
-          "history": 0,
-          "insight": 0,
-          "intimidation": 0,
-          "investigation": 0,
-          "medicine": 0,
-          "nature": 0,
+          "arcana": -1,
+          "athletics": 5,
+          "deception": 3,
+          "history": -1,
+          "insight": 2,
+          "intimidation": 5,
+          "investigation": -2,
+          "medicine": 2,
+          "nature": -1,
           "perception": 0,
-          "performance": 0,
-          "religion": 0,
-          "sleightOfHand": 0,
-          "stealth": 0,
+          "performance": 3,
+          "persuasion": 3,
+          "religion": -2,
+          "sleightOfHand": 1,
+          "stealth": 1,
           "survival": 0
         },
         "proficiencies": {
-          "tools": ["Healer's Kit"],
-          "weapons": ["Crossbows"],
-          "armor": ["Light", "Medium"],
-          "instruments": ["Viola"],
-          "languages": ["Common", "Elven"]
+          "tools": [],
+          "weapons": ["All"],
+          "armor": ["All"],
+          "instruments": [],
+          "languages": ["Common", "Draconic"]
+        },
+        "hitDice": {
+          "value": "1d10",
+          "amount": [3, 3]
+        },
+        "deathSaves": {
+          "successes": 0,
+          "failures": 0
+        },
+        "attacks": [
+          {
+            "name": "Greatsword",
+            "attack": 5,
+            "damage": "2d6+3 slashing"
+          },
+          {
+            "name": "Longsword",
+            "attack": 5,
+            "damage": "1d8+3 slashing"
+          },
+          {
+            "name": "Flail",
+            "attack": 5,
+            "damage": "1d8+3 piercing"
+          }
+        ],
+        "equipment": [
+          {
+            "image": "",
+            "name": "Rank Insignia",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Trophy (Battle Shield)",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Bone Dice",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Common Clothes",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Backpack",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Bedroll",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Mess Kit",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Tinderbox",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Torch",
+            "quantity": 10
+          },
+          {
+            "image": "",
+            "name": "Rations",
+            "quantity": 10
+          },
+          {
+            "image": "",
+            "name": "Waterskin",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Hempen Rope",
+            "quantity": 50
+          },
+          {
+            "image": "",
+            "name": "Holy Symbol",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Flame Cypher",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Smoke Cypher",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Radiant Cyper",
+            "quantity": 1
+          }
+        ],
+        "background": {
+          "age": 10,
+          "height": "5'11\"",
+          "weight": "120 lbs.",
+          "eyes": "green",
+          "skin": "green",
+          "hair": "green",
+          "archetype": "Soldier",
+          "allies": [],
+          "backstory": "",
+          "alignment": "Chaotic Good",
+          "personalityTraits": [],
+          "flaws": [],
+          "bonds": [],
+          "ideals": []
+        },
+        "features": {
+          "race": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "class": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "background": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "items": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "feats": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ]
+        }
+      },
+      "2": {
+        "name": "Albdorphis the Wyrd",
+        "playerName": "Joel",
+        "class": "Warlock",
+        "level": 3,
+        "race": "Tiefling",
+        "hitpoints": [24, 24, 0],
+        "experiencePoints": 1670,
+        "gold": 129,
+        "condition": "Normal",
+        "inspiration": false,
+        "passivePerception": 11,
+        "battle": {
+          "armorClass": "11 (11)",
+          "initiative": 1,
+          "speed": 30
+        },
+        "spells": [
+          {
+            "level": "Cantrip",
+            "known": [
+              {
+                "name": "Vicious Mockery",
+                "prepared": true
+              },
+              {
+                "name": "Eldritch Blast",
+                "prepared": true
+              },
+              {
+                "name": "Prestidigitation",
+                "prepared": true
+              }
+            ]
+          },
+          {
+            "level": 1,
+            "slots": [2, 2],
+            "known": [
+              {
+                "name": "Invisibility",
+                "prepared": true
+              },
+              {
+                "name": "Faerie Fire",
+                "prepared": true
+              },
+              {
+                "name": "Mirror Image",
+                "prepared": true
+              },
+              {
+                "name": "Charm Person",
+                "prepared": true
+              },
+              {
+                "name": "Sleep",
+                "prepared": true
+              },
+              {
+                "name": "Find Familiar",
+                "prepared": true
+              }
+            ]
+          }
+        ],
+        "abilities": {
+          "proficiency": 2,
+          "strength": 8,
+          "dexterity": 12,
+          "constitution": 14,
+          "intelligence": 11,
+          "wisdom": 13,
+          "charisma": 17
+        },
+        "saves": {
+          "strength": -1,
+          "dexterity": 1,
+          "constitution": 2,
+          "intelligence": 0,
+          "wisdom": 3,
+          "charisma": 5
+        },
+        "skills": {
+          "acrobatics": 1,
+          "animalHandling": 1,
+          "arcana": 0,
+          "athletics": 1,
+          "deception": 5,
+          "history": 0,
+          "insight": 1,
+          "intimidation": 5,
+          "investigation": 0,
+          "medicine": 1,
+          "nature": 0,
+          "perception": 1,
+          "performance": 3,
+          "persuasion": 3,
+          "religion": 0,
+          "sleightOfHand": 1,
+          "stealth": 1,
+          "survival": 3
+        },
+        "proficiencies": {
+          "tools": [],
+          "weapons": ["All"],
+          "armor": ["All"],
+          "instruments": [],
+          "languages": ["Common", "Infernal", "Sylvan"]
+        },
+        "hitDice": {
+          "value": "1d10",
+          "amount": [3, 3]
+        },
+        "deathSaves": {
+          "successes": 0,
+          "failures": 0
+        },
+        "attacks": [
+          {
+            "name": "Eldritch Blast",
+            "attack": 6,
+            "damage": "1d10 force"
+          },
+          {
+            "name": "Quarterstaff",
+            "attack": -1,
+            "damage": "1d6 bludgeoning"
+          }
+        ],
+        "equipment": [
+          {
+            "image": "",
+            "name": "Flame Cypher",
+            "quantity": 1
+          }
+        ],
+        "background": {
+          "age": 10,
+          "height": "5'11\"",
+          "weight": "120 lbs.",
+          "eyes": "green",
+          "skin": "green",
+          "hair": "green",
+          "archetype": "Outlander",
+          "allies": [],
+          "backstory": "",
+          "alignment": "Chaotic Good",
+          "personalityTraits": [],
+          "flaws": [],
+          "bonds": [],
+          "ideals": []
+        },
+        "features": {
+          "race": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "class": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "background": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "items": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ],
+          "feats": [
+            {
+              "name": "Foo",
+              "description": "Bar"
+            }
+          ]
+        }
+      },
+      "3": {
+        "name": "S'zrathis-Dren",
+        "playerName": "Dave",
+        "class": "Monk",
+        "level": 3,
+        "race": "Lizardfolk",
+        "hitpoints": [24, 24, 0],
+        "experiencePoints": 0,
+        "gold": 15,
+        "condition": "Normal",
+        "inspiration": false,
+        "passivePerception": 14,
+        "battle": {
+          "armorClass": "15",
+          "initiative": 2,
+          "speed": 40
+        },
+        "spells": [],
+        "abilities": {
+          "proficiency": 2,
+          "strength": 12,
+          "dexterity": 15,
+          "constitution": 15,
+          "intelligence": 10,
+          "wisdom": 15,
+          "charisma": 8
+        },
+        "saves": {
+          "strength": 3,
+          "dexterity": 4,
+          "constitution": 2,
+          "intelligence": 0,
+          "wisdom": 2,
+          "charisma": -1
+        },
+        "skills": {
+          "acrobatics": 4,
+          "animalHandling": 2,
+          "arcana": 0,
+          "athletics": 1,
+          "deception": -1,
+          "history": 0,
+          "insight": 2,
+          "intimidation": -1,
+          "investigation": 0,
+          "medicine": 4,
+          "nature": 0,
+          "perception": 4,
+          "performance": -1,
+          "persuasion": -1,
+          "religion": 2,
+          "sleightOfHand": 2,
+          "stealth": 4,
+          "survival": 4
+        },
+        "proficiencies": {
+          "tools": ["Herbalism Kit", "Leatherworker's Tools"],
+          "weapons": ["Shortsword", "Simple"],
+          "armor": [],
+          "instruments": [],
+          "languages": ["Common", "Primordial", "Draconic"]
         },
         "hitDice": {
           "value": "1d8",
@@ -94,16 +512,121 @@
         },
         "attacks": [
           {
-            "name": "Heavy Crossbow",
-            "attack": 8,
-            "damage": "1d10+3 piercing"
+            "name": "Bone Nunchaku (Bugbear)",
+            "attack": 4,
+            "damage": "1d4+2 bludgeoning"
+          },
+          {
+            "name": "Bone Nunchaku (Orc)",
+            "attack": 4,
+            "damage": "1d4+2 bludgeoning"
+          },
+          {
+            "name": "Steel Shuriken",
+            "attack": 4,
+            "damage": "1d4+2 piercing"
+          },
+          {
+            "name": "Unarmed Strike",
+            "attack": 4,
+            "damage": "1d4+2 bludgeoning"
+          },
+          {
+            "name": "Bite",
+            "attack": 4,
+            "damage": "1d6+2 piercing"
           }
         ],
         "equipment": [
           {
             "image": "",
-            "name": "Map",
-            "quantity": "1"
+            "name": "Brass Bell",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Map Case",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Healer's Kit",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Rations",
+            "quantity": 10
+          },
+          {
+            "image": "",
+            "name": "Black Uwagi",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Sack",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Tinderbox",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Torch",
+            "quantity": 10
+          },
+          {
+            "image": "",
+            "name": "Waterskin",
+            "quantity": 2
+          },
+          {
+            "image": "",
+            "name": "Leatherworker's Tools",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Woodcarver's Tools",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Playing Cards",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Herbalism Kit",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Flute",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Wooden Bowl",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Incense",
+            "quantity": 2
+          },
+          {
+            "image": "",
+            "name": "Small Knife",
+            "quantity": 1
+          },
+          {
+            "image": "",
+            "name": "Necklace",
+            "quantity": 1
           }
         ],
         "background": {
@@ -114,9 +637,9 @@
           "skin": "green",
           "hair": "green",
           "archetype": "Outlander",
-          "allies": ["Pakita"],
+          "allies": [],
           "backstory": "",
-          "alignment": "Neutral",
+          "alignment": "Chaotic Good",
           "personalityTraits": [],
           "flaws": [],
           "bonds": [],
@@ -156,6 +679,6 @@
         }
       }
     },
-    "all": ["1"]
+    "all": ["1", "2"]
   }
 }
