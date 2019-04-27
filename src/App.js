@@ -35,7 +35,15 @@ function App() {
             <DungeonMaster data={data} onUpdate={data => socket.send(data)} />
           )}
         />
-        <Route render={() => <Link to="/player/1">Load Player</Link>} />
+        <Route
+          render={() => (
+            <>
+              <Link to="/player/1">Load Player 1</Link>
+              <Link to="/player/2">Load Player 2</Link>
+              <Link to="/player/3">Load Player 3</Link>
+            </>
+          )}
+        />
       </Switch>
     </Router>
   );
